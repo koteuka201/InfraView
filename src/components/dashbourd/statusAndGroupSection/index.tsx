@@ -52,7 +52,7 @@ export const StatusAndGroupSection=({serviceStatus, displayedNodes, displayedGro
       <Card className={styles['card']}>
         <h3 className={styles['h']}>
           <Users height={20} width={20} />
-          Группы
+          Сетевые группы
         </h3>
         <div className={styles['scroll-area']}>
           <div className={styles['groups-list']}>
