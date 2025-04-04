@@ -8,7 +8,7 @@ export const statusTranslations: Record<string, string> = {
   SHUTDOWN: "Выключен",
   UP: "Работает исправно",
   WARNING: "Перегружен",
-  CRITICAL: "Критично нагружен",
+  CRITICAL: "Критически нагружен",
   DOWN: "Недоступен",
 }
 
