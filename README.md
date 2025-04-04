@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# Проект: InfraView
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Это веб-приложение представляет сервис для мониторинга состояний сетевых узлов и групп предприятия. Состоит из двух частей: **backend** и **frontend**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Backend
+Backend приложение отвечает за обработку всех запросов и управление данными. Оно обеспечивает API для получения информации о состоянии системы, взаимодействует с базой данных и выполняет основную логику приложения.
 
-## Expanding the ESLint configuration
+### Frontend
+Frontend приложение — это пользовательский интерфейс, который взаимодействует с сервером backend и отображает данные для пользователя. Оно предоставляет визуализацию метрик и другие инструменты для работы с системой.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Приложение включает:
+- Отображение данных о состоянии узлов и приложений
+- Визуализация различных метрик (использование процессора, памяти, диска)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Установка
+
+### 1. Склонируйте репозиторий
+
+```bash
+git clone https://github.com/koteuka201/InfraView.git
+cd [папка с проектом]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Перейдите в папку backend
+```bash
+cd backend
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Установите зависимости
+```bash
+npm i
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 4. Запустите backend
+```bash
+npm run start
+```
+
+### 5. Вернитесь в изначальную директорию
+```bash
+cd ..
+```
+
+### 6. Установите зависимости frontend`а
+```bash
+npm i
+```
+
+### 7. Запустите frontend
+```bash
+npm start
 ```
