@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "baseUrl": "./src",
+    "jsx": "react-jsx",
+    "paths": {
+      "@store/*": ["store/*"],
+      "@shared/*": ["shared/*"]
+    },
+  },
+  "include": ["./src", "src", "./src/*", "vite.config.ts"]
+}

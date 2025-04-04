@@ -1,0 +1,46 @@
+@use '@shared/styles' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.2s, border-color 0.2s;
+  outline: none;
+
+  &.default {
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: var(--primary-foreground);
+  }
+
+  &.secondary {
+    border: 1px solid transparent;
+    background-color: var(--gray);
+    color: var(--secondary-foreground);
+  }
+
+  &.destructive {
+    border: 1px solid transparent;
+    background-color: var(--destructive-color);
+    color: var(--destructive-foreground);
+  }
+
+  &.outline {
+    color: var(--foreground-color);
+    border: 1px solid var(--foreground-color);
+  }
+
+  &.success {
+    border: 1px solid transparent;
+    background-color: var(--green-500);
+    color: white;
+  }
+
+  &.focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+}

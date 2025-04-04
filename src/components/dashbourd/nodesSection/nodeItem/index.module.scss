@@ -1,0 +1,92 @@
+@use '@shared/styles' as *;
+
+.nodeContainer {
+  cursor: pointer;
+  transition: border-color 0.3s;
+
+  &.selectedNode {
+    border-color: var(--primary-color);
+  }
+
+  &.hoverNode:hover {
+    border-color: rgba(var(--primary-color-rgb), 0.5);
+  }
+}
+
+.nodeHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.nodeTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nodeStatus {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.nodeName {
+  font-weight: 500;
+}
+
+.nodeDescription {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.metricItem {
+  text-align: center;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.metricValue {
+  font-size: 1rem;
+  font-weight: 500;
+
+  &.metricHigh {
+    color: var(--red);
+  }
+
+  &.metricMedium {
+    color: var(--yellow);
+  }
+}
+
+.nodeStatusColor {
+  &.red {
+    background-color: var(--red);
+  }
+
+  &.yellow {
+    background-color: var(--yellow);
+  }
+
+  &.lightgreen {
+    background-color: var(--green);
+  }
+
+  &.darkred {
+    background-color: var(--darkred);
+  }
+
+  &.grey {
+    background-color: var(--gray);
+  }
+}
