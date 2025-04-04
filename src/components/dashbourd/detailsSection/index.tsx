@@ -15,7 +15,7 @@ export type DetailsSectionProps={
 export const DetailsSection=({}: DetailsSectionProps)=>{
   
   const {selectedNode, filteredMetrics}=useStore()
-  console.log(selectedNode)
+
   return(
     <div>
       {selectedNode ?(
@@ -64,6 +64,7 @@ export const DetailsSection=({}: DetailsSectionProps)=>{
               <div>
                 {selectedNode.applications.length ? (selectedNode.applications.map((app)=>(
                   <ApplicationItem 
+                    key={app.app_id}
                     applicationId={app.app_id} 
                     applicationName={app.app_name} 
                   />
